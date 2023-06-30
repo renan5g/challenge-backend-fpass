@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
+    "build": "nest build",
     "start": "nest start",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
     "start:dev": "nest start --watch"
   },
   "keywords": [],

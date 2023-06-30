@@ -36,41 +36,78 @@ Foram utilizado as seguintes tecnologias e padrões:
 
 ## Como rodar o projeto na sua maquina
 
-### No terminal, clone o projeto:
+No terminal, clone o projeto:
 
 ```sh
 git clone https://github.com/renan5g/challenge-backend-fpass.git
 ```
 
-### Entre na pasta do projeto:
+Entre na pasta do projeto:
 
 ```sh
 cd challenge-backend-fpass
 ```
 
-### Instale a dependências do projeto aqui estou utilizando o [pnpm](https://pnpm.io/) mas pode ser npm ou yarn:
+Instale a dependências do projeto aqui estou utilizando o [pnpm](https://pnpm.io/) mas pode ser npm ou yarn:
 
 ```sh
 pnpm i
 ```
 
-### Copie as variáveis de ambiente do arquivo .env
+Copie as variáveis de ambiente do arquivo .env
 
 ```sh
 cp -r .env.example .env
 ```
 
-### Preencha as variáveis com as chaves de acesso api gateway da [Marvel](https://developer.marvel.com/):
+Preencha as variáveis com as chaves de acesso api gateway da [Marvel](https://developer.marvel.com/):
 
 ```txt
 MARVEL_GATEWAY_PUBLIC_KEY="YOUR_MARVEL_PUBLIC_KEY";
 MARVEL_GATEWAY_PRIVATE_KEY="YOUR_MARVEL_PRIVATE_KEY";
 ```
 
-### Para executar a aplicação:
+Para executar a aplicação:
 
 ```sh
-pnpm run start
+# development
+$ pnpm run start
+
+# watch mode
+$ pnpm run start:dev
+
+# production mode
+$ pnpm run start:prod
+```
+
+Para executar os tests:
+
+```sh
+pnpm run test
 ```
 
 Pronto, agora e possível acessar a aplicação a partir da rota [http://localhost:3000](http://localhost:3000)
+
+## Arquitetura de pastas
+
+```txt
+.
+├── src
+│   ├── application
+│   │   ├── repositories
+│   │   └── use-cases
+│   ├── core
+│   ├── domain
+│   │   └── entities
+│   └── infra
+│       ├── config
+│       ├── http
+│       │   ├── controllers
+│       │   └── resources
+│       ├── database
+│       └── services
+└── test
+    ├── factories
+    ├── mocks
+    └── repositories
+```
