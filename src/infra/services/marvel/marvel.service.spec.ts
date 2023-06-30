@@ -16,3 +16,7 @@
 //     expect(character).toBeInstanceOf(Character);
 //   });
 // });
+
+it('one add one equals two', () => {
+  expect(1 + 1).toBe(2);
+});
