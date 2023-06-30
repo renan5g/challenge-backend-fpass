@@ -1,4 +1,5 @@
 import { FavoritesRepository } from '@application/repositories/favorites-repository';
+import { Injectable } from '@nestjs/common';
 
 interface UnfavoriteHeroInput {
   characterId: string;
@@ -6,6 +7,7 @@ interface UnfavoriteHeroInput {
 
 type UnfavoriteHeroOutput = void;
 
+@Injectable()
 export class UnfavoriteHero {
   constructor(readonly favoritesRepository: FavoritesRepository) {}
 

@@ -1,5 +1,6 @@
 import { FavoritesRepository } from '@application/repositories/favorites-repository';
 import { Favorite } from '@domain/entities/favorite';
+import { Injectable } from '@nestjs/common';
 
 interface ListFavoritesInput {
   page: number;
@@ -9,6 +10,7 @@ type ListFavoritesOutput = {
   favorites: Favorite[];
 };
 
+@Injectable()
 export class ListFavorites {
   constructor(readonly favoritesRepository: FavoritesRepository) {}
 

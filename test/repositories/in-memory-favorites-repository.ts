@@ -1,7 +1,9 @@
 import { FavoritesRepository } from '@application/repositories/favorites-repository';
 import { PaginationParams } from '@core/repositories/pagination-params';
 import { Favorite } from '@domain/entities/favorite';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class InMemoryFavoritesRepository implements FavoritesRepository {
   public items: Favorite[] = [];
 

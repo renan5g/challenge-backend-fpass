@@ -12,7 +12,7 @@ export class Favorite extends Entity<FavoriteProps> {
     return this.props.character;
   }
 
-  get createdAt(): Date | undefined | null {
+  get createdAt() {
     return this.props.createdAt;
   }
 
