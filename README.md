@@ -111,3 +111,22 @@ Pronto, agora e possível acessar a aplicação a partir da rota [http://localho
     ├── mocks
     └── repositories
 ```
+
+## Rotas
+
+### Favoritos
+
+- Listar favoritos (Favorites) [GET /favorites]
+
+---
+
+### Hero
+
+- Pesquisar por Herói (Characters) [GET /characters]
+  - q = Buscar por nome do herói
+  - page = Pagina atual
+  - per_page = Limite por pagina
+- Detalhes do herói (Characters) [GET /characters/:id]
+- Favoritar herói (Characters) [POST /characters/:id/favorite]
+- Toggle Favorito herói (Characters) [POST /characters/:id/toggle-favorite]
+- Desfavoritar herói (Characters) [DELETE /characters/:id/unfavorite]
